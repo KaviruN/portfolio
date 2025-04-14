@@ -1,0 +1,20 @@
+.navbar {
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 1em;
+
+    
+    
+  }
+
+  &__link {
+    color: var(--color-text);
+
+    &:hover {
+        font-weight: 600;
+        color: hsla(0, 0%, 100%, 0.818);
+      }
+  }
+}

@@ -1,15 +1,15 @@
 function NavBar() {
   return (
     <nav className="navbar">
-      <ul className="navbar-list">
-        <li className="navbar-item">
-            <a href="/" className="navbar-link">Home</a>
+      <ul className="navbar__list">
+        <li className="navbar__item">
+            <a href="/" className="navbar__link">Home</a>
         </li>
-        <li className="navbar-item">
-            <a href="#about" className="navbar-link">About</a>
+        <li className="navba__item">
+            <a href="#about" className="navbar__link">About</a>
         </li>
-        <li className="navbar-item">
-            <a href="#contact" className="navbar-link">Contact</a>
+        <li className="navba__item">
+            <a href="#contact" className="navbar__link">Contact</a>
         </li>
 
       </ul>
