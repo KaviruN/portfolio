@@ -1,6 +1,7 @@
 import 'remixicon/fonts/remixicon.css'
-import NavBar from "./NavBar"
 import "./scss/style.css";
+import Hero from './Hero';
+import NavBar from "./NavBar"
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="container">
       <header className='header'>
         <NavBar />
-        
+        <Hero />
       </header>
     </div>
   )

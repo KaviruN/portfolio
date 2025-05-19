@@ -1,14 +1,92 @@
 @use '../util/' as u;
 
 .hero {
-  &__wrapper {
-    display: grid;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 90vh;
+  background: radial-gradient(50% 50% at 50% 50%, #763CAC22 0%, rgba(50, 15, 133, 0) 80%);
 
-    @include u.breakpoint(medium) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-      align-items: center;
+  &__intro {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 10px;
+
+    span {
+      color: #763CAC;
     }
+  }
+
+  &__highlight {
+    color: #763CAC;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-size: 1rem;
+    max-width: 600px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  &__buttons {
+    margin-top: 20px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 30px;
+  background: #763CAC;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #763CAC55;
+
+  &:hover {
+    background: #5b2e99;
+    box-shadow: 0 0 15px #763CAC99;
+  }
+
+  &--secondary {
+    background: transparent;
+    border: 2px solid #763CAC;
+    color: #763CAC;
+
+    &:hover {
+      background: #763CAC;
+      color: #fff;
+    }
+  }
+}
+
+// Responsive wrapper (keep existing)
+.hero__wrapper {
+  display: grid;
+  gap: 20px;
+
+  @include u.breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
   }
 }
