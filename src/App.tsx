@@ -6,7 +6,10 @@ import "./scss/style.css";
 function App() {
   return (
     <div className="container">
-      <NavBar />
+      <header className='header'>
+        <NavBar />
+        
+      </header>
     </div>
   )
 }
