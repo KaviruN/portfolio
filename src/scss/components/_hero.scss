@@ -1,4 +1,4 @@
-@use '../util/' as u;
+@use "../util/" as u;
 
 .hero {
   display: flex;
@@ -7,7 +7,11 @@
   align-items: center;
   padding: 3.75em 2em; // 60px 20px
   min-height: 90vh;
-  background: radial-gradient(50% 50% at 50% 50%, hsl(271, 48%, 45%, 0.13) 0%, hsla(271, 81%, 29%, 0) 80%);
+  background: radial-gradient(
+    40% 40% at 50% 30%, // smaller and higher up
+    hsl(271, 48%, 45%, 0.13) 0%,
+    hsla(271, 81%, 29%, 0) 60%
+  );
 
   &__intro {
     font-size: 1rem;
@@ -51,16 +55,13 @@
   }
 
   &__wrapper {
-  display: grid;
-  gap: 1.25em; // 20px
+    display: grid;
+    gap: 1.25em; // 20px
 
-  @include u.breakpoint(medium) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5em; // 40px
-    align-items: center;
+    @include u.breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5em; // 40px
+      align-items: center;
+    }
   }
 }
-}
-
-
-

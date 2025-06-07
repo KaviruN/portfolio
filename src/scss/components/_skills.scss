@@ -1,31 +1,55 @@
 .skills {
+  background-image: radial-gradient(
+    ellipse 50% 46% at 49% 35%,
+    hsl(266.2, 31.2%, 24.5%) 0%,
+    hsla(257.7, 67.4%, 27.6%, 0) 100%
+  );
+  padding: 1em;
+
+  &__cards {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     padding: 1em;
-    background-image: radial-gradient(ellipse 50.00% 50.00% at 50.00% 50.00%, #763CAC 0%, rgba(50, 15, 133, 0) 100%);
 
-    &__card{
-        display: flex;
-        width: 100%;
-        // justify-content: center;
-        border-radius: 1.1em;
-        align-items: center;
-        background-color: hsla(0, 0%, 100%, 0.099);
-        margin-bottom: .5em;
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        box-shadow: 0 2px 8px 0 rgba(120, 60, 172, 0.08);
-        
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1em;
+    }
+  }
+
+  &__card {
+    display: flex;
+    width: 100%;
+    // justify-content: center;
+    border-radius: 1.1em;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.099);
+    margin-bottom: 0.5em;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 8px 0 rgba(120, 60, 172, 0.08);
+    cursor: default;
+
+    &:hover {
+      scale: 1.03;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 16px 0 rgba(120, 60, 172, 0.16);
     }
 
-    &__icon {
-        margin: 0 .5em;
-        font-size: 2.5rem;
+    @media (min-width: 768px) {
+      width: 20%;
     }
+  }
 
-    &__name {
-        font-size: 1.2rem;
-        font-weight: 400;
-    }
+  &__icon {
+    margin: 0 0.5em;
+    font-size: 2.5rem;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
 }
