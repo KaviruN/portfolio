@@ -8,12 +8,17 @@
   margin: 0;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+  position: relative; /* Needed for absolute child positioning */
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
-  position: relative;
 }
 
 img {

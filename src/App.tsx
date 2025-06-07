@@ -4,7 +4,7 @@ import "./scss/style.css";
 import Hero from './Hero';
 import NavBar from "./NavBar"
 import SkillCard from './SkillCard';
-import About from './ABout';
+import About from './About';
 
 
 
