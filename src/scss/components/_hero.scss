@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3.75em 1.25em; // 60px 20px
+  padding: 3.75em 2em; // 60px 20px
   min-height: 90vh;
   background: radial-gradient(50% 50% at 50% 50%, hsl(271, 48%, 45%, 0.13) 0%, hsla(271, 81%, 29%, 0) 80%);
 
@@ -13,6 +13,7 @@
     font-size: 1rem;
     color: hsl(0, 0%, 67%);
     margin-bottom: 0.625em; // 10px
+    font-family: "Roboto Mono", monospace;
 
     span {
       color: hsl(271, 48%, 45%);
@@ -34,6 +35,7 @@
     font-size: 1.6rem;
     font-weight: 300;
     margin-bottom: 1.25em; // 20px
+    font-family: "Roboto Mono", monospace;
   }
 
   &__description {
