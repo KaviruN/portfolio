@@ -1,11 +1,18 @@
+import Spotify from "./Spotify";
+
 const About = () => {
     return (
-        <div className="about">
-        <h1>About This App</h1>
-        <p>This app is designed to help you manage your tasks efficiently.</p>
-        <p>It allows you to create, edit, and delete tasks, as well as mark them as completed.</p>
-        <p>We hope you find it useful!</p>
-        </div>
+        <section className="about" id="about">
+            <Spotify />
+            <div className="about__container">
+                <h2>About Me</h2>
+                <p>I started exploring tech at 11 with Arduino projects. By 15, I was building tools in <span className="python">Python</span>, and today, I’m an undergraduate focused on <span className="highlight">backend development, cybersecurity, and ethical hacking.</span>
+
+                    I love building secure systems and clean APIs with <span className="django">Django</span> and <span className="react">React.</span> Whether it’s crafting a solid backend or experimenting with UI, I’m always <span className="highlight2">building, learning, and leveling up.</span>
+
+                </p>
+            </div>
+        </section>
     );
 }
 

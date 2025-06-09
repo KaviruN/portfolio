@@ -1,8 +1,34 @@
 .about {
-  height: 100dvh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  text-align: center;
+  letter-spacing: 0.05em;
+  height: 110dvh;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    hsl(271, 68%, 77%, 0.13) 0%,
+    hsla(271, 81%, 29%, 0) 80%
+  );
+  color: hsla(0, 0%, 100%, 0.549);
+
+  & h2 {
+    font-weight: 500;
+    font-family: "Roboto Mono", monospace;
+    margin-bottom: 1em;
+  }
+
+  &__container{
+    max-width: 800px;
+    border: 2px solid hsla(272, 64%, 84%, 0.41);
+    padding: 2em;
+    border-radius: 0.5em;
+    line-height: 1.5em;
+    background-color: hsla(0, 0%, 100%, 0.059);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
 }

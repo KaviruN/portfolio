@@ -5,3 +5,28 @@
   --color-accent: hsla(0, 0%, 80%, 1);
   --color-highlight: hsla(271, 48%, 45%, 1);
 }
+
+.python {
+  color: hsl(207, 51%, 43%);
+  font-weight: 900;
+}
+
+.highlight{
+  color: hsl(0, 75%, 50%);
+  font-weight: 900;
+}
+
+.highlight2{
+  color: hsl(60, 75%, 50%);
+  font-weight: 900;
+}
+
+.django {
+  color: hsl(120, 57%, 40%); // Django green
+  font-weight: 900;
+}
+
+.react {
+  color: hsl(200, 100%, 50%); // React blue
+  font-weight: 900;
+}
