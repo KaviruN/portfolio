@@ -22,13 +22,13 @@
 
   &__container{
     max-width: 800px;
-    border: 2px solid hsla(272, 64%, 84%, 0.41);
+    // border: 2px solid hsla(272, 64%, 84%, 0.41);
     padding: 2em;
-    border-radius: 0.5em;
+    border-radius: 1.1em;
     line-height: 1.5em;
     background-color: hsla(0, 0%, 100%, 0.059);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
   }
   
 }

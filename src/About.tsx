@@ -3,7 +3,7 @@ import Spotify from "./Spotify";
 const About = () => {
     return (
         <section className="about" id="about">
-            <Spotify />
+            {/* <Spotify /> */}
             <div className="about__container">
                 <h2>About Me</h2>
                 <p>I started exploring tech at 11 with Arduino projects. By 15, I was building tools in <span className="python">Python</span>, and today, I’m an undergraduate focused on <span className="highlight">backend development, cybersecurity, and ethical hacking.</span>

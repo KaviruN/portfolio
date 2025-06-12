@@ -1,7 +1,13 @@
-const Spotify = () => {
+
+
+
+
+function Spotify() {
+
     return (
-        <div>asasasas</div>
+        <button >ssss</button>
     )
+
 }
 
 export default Spotify;
