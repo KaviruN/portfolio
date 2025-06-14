@@ -5,6 +5,7 @@
     hsla(257.7, 67.4%, 27.6%, 0) 70%
   );
   padding: 1em;
+  color: hsla(226, 70%, 88%, 1);
 
   &__cards {
     display: flex;
@@ -25,7 +26,7 @@
     // justify-content: center;
     border-radius: 1.1em;
     align-items: center;
-    background-color: hsla(0, 0%, 100%, 0.099);
+    background: radial-gradient(ellipse 127.02% 151.92% at 15.32% 21.04%, rgba(104.78, 58.65, 146.62, 0.20) 0%, rgba(109.97, 190.80, 244.37, 0.04) 77%, rgba(69.95, 144.07, 212.50, 0) 100%);
     margin-bottom: 0.5em;
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -35,7 +36,7 @@
     &:hover {
       scale: 1.03;
       transition: all 0.3s ease-in-out;
-      box-shadow: 0 4px 16px 0 rgba(120, 60, 172, 0.16);
+      box-shadow: 0 4px 16px 0 rgba(194, 150, 233, 0.16);
     }
 
     @media (min-width: 768px) {
