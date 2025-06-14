@@ -9,11 +9,12 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    height: 50dvh;
+    
 
     @media (min-width: 768px) {
       flex-direction: row;
       // align-items: center;
+      height: 50dvh;
     }
   }
 
