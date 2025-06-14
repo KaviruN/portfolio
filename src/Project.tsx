@@ -23,6 +23,7 @@ function Project({ title, description, img, link }: ProjectProps) {
                 </div>
             </div>
         </div>
+        
     );
 }
 

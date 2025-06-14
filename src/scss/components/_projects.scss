@@ -1,17 +1,27 @@
-@use '../util/functions' as f;
+@use "../util/functions" as f;
 
 .projects {
   color: hsla(226, 70%, 88%, 1);
+  position: relative;
 
   &__project {
+    position: relative;
     padding: 2em;
     display: flex;
     flex-direction: column;
+    height: 50dvh;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      // align-items: center;
+    }
   }
 
   &__title {
     margin-bottom: 1.2em;
   }
+
+
 
   &__description {
     background: radial-gradient(
@@ -26,19 +36,32 @@
     backdrop-filter: blur(40px);
     max-width: 669px;
     margin-bottom: 1.5em;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      left: 10%;
+      
+    }
   }
 
   &__view {
     border-top: 1.5em solid hsla(281, 68%, 14%, 1);
     border-left: 1.75em solid hsla(281, 68%, 14%, 1);
     border-top-left-radius: f.em(10);
-    border-top-right-radius:  f.em(10);
+    border-top-right-radius: f.em(10);
     border-bottom-right-radius: f.em(10);
     max-width: 642px;
+    margin-bottom: 1.5em;
 
+    @media (min-width: 768px) {
+      position: absolute;
+      right: 10%;
+      top: 0;
+      z-index: -1;
+    }
   }
 
-  &__img img{
+  &__img img {
     border-top-left-radius: f.em(10);
     border-bottom-right-radius: f.em(10);
   }
