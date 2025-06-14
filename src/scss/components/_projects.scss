@@ -1,8 +1,12 @@
+@use '../util/functions' as f;
+
 .projects {
   color: hsla(226, 70%, 88%, 1);
 
   &__project {
     padding: 2em;
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -10,12 +14,32 @@
   }
 
   &__description {
-    background: radial-gradient(ellipse 127.02% 151.92% at 15.32% 21.04%, rgba(104.78, 58.65, 146.62, 0.20) 0%, rgba(109.97, 190.80, 244.37, 0.04) 77%, rgba(69.95, 144.07, 212.50, 0) 100%);
+    background: radial-gradient(
+      ellipse 127.02% 151.92% at 15.32% 21.04%,
+      rgba(104.78, 58.65, 146.62, 0.2) 0%,
+      rgba(109.97, 190.8, 244.37, 0.04) 77%,
+      rgba(69.95, 144.07, 212.5, 0) 100%
+    );
     padding: 1.5em 2em;
     border-radius: 1.5em;
     background-blend-mode: overlay, normal;
     backdrop-filter: blur(40px);
     max-width: 669px;
-    
+    margin-bottom: 1.5em;
+  }
+
+  &__view {
+    border-top: 1.5em solid hsla(281, 68%, 14%, 1);
+    border-left: 1.75em solid hsla(281, 68%, 14%, 1);
+    border-top-left-radius: f.em(10);
+    border-top-right-radius:  f.em(10);
+    border-bottom-right-radius: f.em(10);
+    max-width: 642px;
+
+  }
+
+  &__img img{
+    border-top-left-radius: f.em(10);
+    border-bottom-right-radius: f.em(10);
   }
 }
