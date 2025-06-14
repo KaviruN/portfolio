@@ -9,7 +9,6 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -18,11 +17,19 @@
     }
   }
 
+  // &__header {
+  //   order: 2;
+  // }
+
   &__title {
     margin-bottom: 1.2em;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      left: 10%;
+    }
   }
-
-
 
   &__description {
     background: radial-gradient(
@@ -41,7 +48,7 @@
     @media (min-width: 768px) {
       position: absolute;
       left: 10%;
-      
+      top: 20%;
     }
   }
 
