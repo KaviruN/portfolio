@@ -11,9 +11,11 @@
 
   &__description {
     background: radial-gradient(ellipse 127.02% 151.92% at 15.32% 21.04%, rgba(104.78, 58.65, 146.62, 0.20) 0%, rgba(109.97, 190.80, 244.37, 0.04) 77%, rgba(69.95, 144.07, 212.50, 0) 100%);
-    padding: 1.5em;
+    padding: 1.5em 2em;
     border-radius: 1.5em;
     background-blend-mode: overlay, normal;
     backdrop-filter: blur(40px);
+    max-width: 669px;
+    
   }
 }
