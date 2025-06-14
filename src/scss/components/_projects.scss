@@ -10,22 +10,24 @@
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1485px) {
       flex-direction: row;
       // align-items: center;
       height: 50dvh;
     }
-  }
 
-  // &__header {
-  //   order: 2;
-  // }
+    @media (max-width: 1485px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
 
   &__title {
     margin-bottom: 1.2em;
-    text-align: center;
+  }
 
-    @media (min-width: 768px) {
+  &__header {
+    @media (min-width: 1485px) {
       position: absolute;
       left: 10%;
     }
@@ -44,12 +46,6 @@
     backdrop-filter: blur(40px);
     max-width: 669px;
     margin-bottom: 1.5em;
-
-    @media (min-width: 768px) {
-      position: absolute;
-      left: 10%;
-      top: 20%;
-    }
   }
 
   &__view {
@@ -61,7 +57,7 @@
     max-width: 642px;
     margin-bottom: 1.5em;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1485px) {
       position: absolute;
       right: 10%;
       top: 0;

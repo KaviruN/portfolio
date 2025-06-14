@@ -12,8 +12,8 @@ import Projects from './Projects';
 function App() {
   return (
     <div className="container">
+      <NavBar />
       <header className='header'>
-        <NavBar />
         <Hero />
       </header>
       <main>
