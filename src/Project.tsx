@@ -17,9 +17,8 @@ function Project({ title, description, img, link }: ProjectProps) {
                 </div>
             </div>
             <div className="projects__view">
-                {/* <div className="projects__view--background"></div> */}
                 <div className="projects__img">
-                    <a href={link}><img src={img} alt="nexcent" /></a>
+                    <a href={link} target="_blank"><img src={img} alt="nexcent" /></a>
                 </div>
             </div>
         </div>
