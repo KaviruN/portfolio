@@ -3,7 +3,7 @@
 type ProjectProps = {
     title: string;
     sub: string;
-    description: string;
+    description: any;
     img: string;
     demo: string;
     githublink?: string;
