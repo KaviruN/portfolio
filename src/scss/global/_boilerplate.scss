@@ -14,6 +14,10 @@ body, html {
   position: relative; /* Needed for absolute child positioning */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
