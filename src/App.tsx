@@ -24,7 +24,7 @@ function App() {
           <div className="skills__cards">
             <SkillCard icon="ri-html5-fill" name="HTML" />
             <SkillCard icon="ri-css3-fill" name="css" />
-            <SkillCard icon="ri-javascript-fill" name="JvaScript" />
+            <SkillCard icon="ri-javascript-fill" name="JavaScript" />
             <SkillCard icon="devicon-typescript-plain" name="TypeScript" />
             <SkillCard icon="ri-reactjs-line" name="React" />
             <SkillCard icon="devicon-sass-original" name="Sass(Scss)" />
