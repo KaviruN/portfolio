@@ -62,6 +62,11 @@
     margin-bottom: 1.5em;
     border-radius: f.em(10);
     background-color: hsla(281, 68%, 14%, 1);
+    
+  }
+
+  &__img img{
+    border-radius: f.em(10);
   }
 
   &__project {
@@ -69,6 +74,8 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
+
+
 
     @media (min-width: 1485px) {
       flex-direction: row;
@@ -86,6 +93,7 @@
           border-left: 1.75em solid hsla(281, 68%, 14%, 1);
         }
         .projects__img img {
+          border-radius: 0;
           border-top-left-radius: f.em(10);
           border-bottom-right-radius: f.em(10);
         }
