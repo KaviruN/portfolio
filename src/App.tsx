@@ -12,9 +12,11 @@ import Contact from './Contact';
 
 function App() {
   return (
+    
     <div className="container">
-      <NavBar />
+      
       <header className='header'>
+        <NavBar />
         <Hero />
       </header>
       <main>
