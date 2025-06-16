@@ -9,8 +9,8 @@ function Hero() {
                 Let’s create something powerful — and secure.
             </p>
             <div className="hero__buttons">
-                <a href="#" className="btn">View Projects</a>
-                <a href="#" className="btn btn--secondary">Contact Me</a>
+                <a href="#projects" className="btn">View Projects</a>
+                <a href="#contact" className="btn btn--secondary">Contact Me</a>
             </div>
         </main>
     )
