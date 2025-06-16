@@ -4,7 +4,7 @@ import jakeElwood from './assets/jake&elwood.png';
 import scrollAnimations from './assets/scroll-animations.png';
 import livingTheSimpleLife from './assets/living-the-simple-life.png';
 import qrGenerator from './assets/qrgenerator.png';
-
+import todo from './assets/todo.png';
 
 function Projects() {
     return (
@@ -25,7 +25,7 @@ function Projects() {
             />
             <Project demo='https://projects.kaviru.me/living-the-simple-life/' githublink='https://github.com/KaviruN/living-the-simple-life' img={livingTheSimpleLife} title="living the simple life" sub="Frontend Focuse" description="This project is an early step in my development journey, created to explore project structure and basic version control with GitHub as I begin learning best practices." />
             <Project demo='https://projects.kaviru.me/qrcode/' githublink='https://github.com/KaviruN/qrcode' img={qrGenerator} title="Qr Maker" sub="Frontend Focuse" description="I built this just for fun and as a way to experiment with UI design and QR code generation." />
-            {/* <Project demo='' githublink='' img={} title="" sub="Frontend Focuse" description="" /> */}
+            <Project demo='https://todo.kaviru.me/' githublink='https://github.com/KaviruN/toDoApp' img={todo} title="Todo App" sub="Backend Focuse" description="This is a full-stack Todo application built with Django for the backend and React with TypeScript for the frontend. In this project, I practiced combining REST framework , API for authentication and real time update." />
         </section>
     )
 }

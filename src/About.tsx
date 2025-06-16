@@ -1,4 +1,4 @@
-import Spotify from "./Spotify";
+
 
 const About = () => {
     return (
