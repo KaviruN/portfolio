@@ -31,6 +31,7 @@
       height: 100%;
       font-size: 2em;
       z-index: 20000;
+      padding: 0;
     }
 
     @include m.breakpoint("medium") {
