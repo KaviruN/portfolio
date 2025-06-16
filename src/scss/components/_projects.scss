@@ -42,6 +42,18 @@
     backdrop-filter: blur(40px);
     max-width: 669px;
     margin-bottom: 1em;
+    cursor: default;
+    transition: scale 0.2s ease-in-out;
+
+    &:hover {
+      scale: 1.02;
+      box-shadow: 0 4px 16px 0 rgba(171, 93, 240, 0.16);
+    }
+
+    &:active {
+      scale: 1.02;
+      box-shadow: 0 4px 16px 0 rgba(171, 93, 240, 0.16);
+    }
   }
 
   &__view {

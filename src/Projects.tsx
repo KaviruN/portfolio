@@ -2,6 +2,8 @@ import Project from './Project';
 import nexcent from './assets/nexcent.png';
 import jakeElwood from './assets/jake&elwood.png';
 import scrollAnimations from './assets/scroll-animations.png';
+import livingTheSimpleLife from './assets/living-the-simple-life.png';
+import qrGenerator from './assets/qrgenerator.png';
 
 
 function Projects() {
@@ -17,11 +19,12 @@ function Projects() {
                 sub="Frontend Focused"
                 description={
                     <>
-                        This project provides a minimal setup to get React working in Vite with HMR and some ESLint rules. It focuses on implementing smooth scroll animations using modern web technologies. Inspired by the hover animation in the <a href="https://huly.io/" target="_blank" rel="noopener noreferrer">farmus section of huly.io</a>.
+                        This project provides a minimal setup to get React working in Vite with HMR and some ESLint rules. It focuses on implementing smooth scroll animations using modern web technologies. Inspired by the hover animation in the famous <a href="https://huly.io/" target="_blank" rel="noopener noreferrer">huly.io</a>.
                     </>
                 }
             />
-            {/* <Project demo='' githublink='' img={} title="" sub="Frontend Focuse" description="This project is an early step in my development journey, created to explore project structure and basic version control with GitHub as I begin learning best practices." /> */}
+            <Project demo='https://projects.kaviru.me/living-the-simple-life/' githublink='https://github.com/KaviruN/living-the-simple-life' img={livingTheSimpleLife} title="living the simple life" sub="Frontend Focuse" description="This project is an early step in my development journey, created to explore project structure and basic version control with GitHub as I begin learning best practices." />
+            <Project demo='https://projects.kaviru.me/qrcode/' githublink='https://github.com/KaviruN/qrcode' img={qrGenerator} title="Qr Maker" sub="Frontend Focuse" description="I built this just for fun and as a way to experiment with UI design and QR code generation." />
             {/* <Project demo='' githublink='' img={} title="" sub="Frontend Focuse" description="" /> */}
         </section>
     )
