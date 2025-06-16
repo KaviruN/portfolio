@@ -6,6 +6,7 @@ import NavBar from "./NavBar"
 import SkillCard from './SkillCard';
 import About from './About';
 import Projects from './Projects';
+import Contact from './Contact';
 
 
 
@@ -38,6 +39,7 @@ function App() {
         </section>
       </main>
       <Projects />
+      <Contact />
     </div>
   )
 }
