@@ -1,0 +1,41 @@
+.contact {
+  margin: 4em 2em;
+  margin-top: 8em;
+  padding: 1em;
+  max-width: 900px;
+
+  & * {
+    margin-bottom: 1em;
+  }
+
+  & p{
+    color: hsla(0, 0%, 100%, 0.663);
+  }
+
+  &__email{
+    color: hsl(212, 100%, 50%);
+    text-decoration: underline dotted;
+    word-break: break-all;
+    font-family: monospace;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+  }
+
+  &__socials a {
+    font-size: 2em;
+    color: hsl(0, 0%, 20%);
+    transition: color 0.2s;
+
+    &:hover {
+      color: hsl(0, 0%, 16%);
+    }
+  }
+
+  &__socials a:nth-child(2) {
+    margin-left: 1em;
+    
+    &:hover {
+      color: hsl(212, 100%, 50%);
+    }
+  }
+}

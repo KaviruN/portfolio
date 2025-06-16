@@ -1,0 +1,56 @@
+.skills {
+  background-image: radial-gradient(
+    ellipse 49% 39% at 50% 50%,
+    hsl(266.2, 31.2%, 24.5%) 0%,
+    hsla(257.7, 67.4%, 27.6%, 0) 70%
+  );
+  padding: 1em;
+  color: hsla(226, 70%, 88%, 1);
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1em;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 1em;
+    }
+  }
+
+  &__card {
+    display: flex;
+    width: 100%;
+    // justify-content: center;
+    border-radius: 1.1em;
+    align-items: center;
+    background: radial-gradient(ellipse 127.02% 151.92% at 15.32% 21.04%, rgba(104.78, 58.65, 146.62, 0.20) 0%, rgba(109.97, 190.80, 244.37, 0.04) 77%, rgba(69.95, 144.07, 212.50, 0) 100%);
+    margin-bottom: 0.5em;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 8px 0 rgba(120, 60, 172, 0.08);
+    cursor: default;
+
+    &:hover {
+      scale: 1.03;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 16px 0 rgba(194, 150, 233, 0.16);
+    }
+
+    @media (min-width: 768px) {
+      width: 20%;
+    }
+  }
+
+  &__icon {
+    margin: 0 0.5em;
+    font-size: 2.5rem;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}

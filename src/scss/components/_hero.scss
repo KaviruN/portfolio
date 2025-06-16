@@ -1,13 +1,66 @@
-@use '../util/' as u;
+@use "../util/" as u;
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.75em 2em; // 60px 20px
+  min-height: 90vh;
+  background: radial-gradient(
+    40% 40% at 50% 30%, // smaller and higher up
+    hsl(271, 48%, 45%, 0.13) 0%,
+    hsla(271, 81%, 29%, 0) 60%
+  );
+
+  &__intro {
+    font-size: 1rem;
+    color: hsl(0, 0%, 67%);
+    margin-bottom: 0.625em; // 10px
+    font-family: "Roboto Mono", monospace;
+
+    span {
+      color: hsl(271, 48%, 45%);
+    }
+  }
+
+  &__highlight {
+    color: hsl(271, 48%, 45%);
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 0.625em; // 10px
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 1.25em; // 20px
+    font-family: "Roboto Mono", monospace;
+  }
+
+  &__description {
+    font-size: 1rem;
+    max-width: 37.5em; // 600px
+    color: hsl(0, 0%, 80%);
+    line-height: 1.6;
+    margin-bottom: 1.875em; // 30px
+  }
+
+  &__buttons {
+    margin-top: 1.25em; // 20px
+  }
+
   &__wrapper {
     display: grid;
-    gap: 20px;
+    gap: 1.25em; // 20px
 
     @include u.breakpoint(medium) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
+      gap: 2.5em; // 40px
       align-items: center;
     }
   }

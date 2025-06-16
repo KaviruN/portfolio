@@ -1,0 +1,29 @@
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5625em; // 12px 25px
+  font-size: 1rem;
+  border-radius: 1.875em; // 30px
+  background: hsl(271, 48%, 45%);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0.625em; // 10px
+  transition: 0.3s;
+  box-shadow: 0 0 0.625em hsl(271, 48%, 45%, 0.33); // 10px
+
+  &:hover {
+    background: hsl(271, 54%, 36%);
+    box-shadow: 0 0 0.9375em hsl(271, 48%, 45%, 0.6); // 15px
+  }
+
+  &--secondary {
+    background: transparent;
+    border: 0.125em solid hsl(271, 48%, 45%); // 2px
+    color: hsl(271, 48%, 45%);
+
+    &:hover {
+      background: hsl(271, 48%, 45%);
+      color: #fff;
+    }
+  }
+}
