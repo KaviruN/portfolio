@@ -1,10 +1,13 @@
 {
+  "homepage": "https://www.kaviru.me",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -12,6 +15,7 @@
   "dependencies": {
     "axios": "^1.9.0",
     "devicon": "^2.16.0",
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remixicon": "^4.6.0",
