@@ -3,6 +3,11 @@
 .projects {
   color: hsla(226, 70%, 88%, 1);
   position: relative;
+  background-image: radial-gradient(
+    40% 40% at 50% 30%,
+    hsla(271, 48%, 45%, 0.13) 0%,
+    hsla(271, 81%, 29%, 0) 60%
+  );
 
   &__links a {
     font-size: 2em;
@@ -62,10 +67,9 @@
     margin-bottom: 1.5em;
     border-radius: f.em(10);
     background-color: hsla(281, 68%, 14%, 1);
-    
   }
 
-  &__img img{
+  &__img img {
     border-radius: f.em(10);
   }
 
@@ -74,8 +78,6 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-
-
 
     @media (min-width: 1485px) {
       flex-direction: row;

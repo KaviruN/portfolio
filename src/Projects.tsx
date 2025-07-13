@@ -6,6 +6,7 @@ import livingTheSimpleLife from './assets/living-the-simple-life.png';
 import qrGenerator from './assets/qrgenerator.png';
 import todo from './assets/todo.png';
 import wifihack from './assets/wifihack.png';
+import TurboStryke from './assets/turbostryke.png';
 
 function Projects() {
     return (
@@ -25,6 +26,7 @@ function Projects() {
                 }
             />
             <Project demo='https://projects.kaviru.me/living-the-simple-life/' githublink='https://github.com/KaviruN/living-the-simple-life' img={livingTheSimpleLife} title="living the simple life" sub="Frontend Focuse" description="This project is an early step in my development journey, created to explore project structure and basic version control with GitHub as I begin learning best practices." />
+            <Project demo='https://turbo.kaviru.me/' githublink='https://github.com/KaviruN/TurboStryke' img={TurboStryke} title="Turbo Stryke" sub="Frontend Focuse" description="The TurboStryke project is a car-themed web application built using React and JavaScript, with a touch of 3D graphics powered by Three.js. Inspired by a dark, edgy theme influenced by the Akatsuki organization from Naruto, it combines speed and style into a unique user experience. This project was created as part of a university assignment." />
             <Project demo='https://projects.kaviru.me/qrcode/' githublink='https://github.com/KaviruN/qrcode' img={qrGenerator} title="Qr Maker" sub="Frontend Focuse" description="I built this just for fun and as a way to experiment with UI design and QR code generation." />
             <Project demo='https://todo.kaviru.me/' githublink='https://github.com/KaviruN/toDoApp' img={todo} title="Todo App" sub="Backend Focuse" description="This is a full-stack Todo application built with Django for the backend and React with TypeScript for the frontend. In this project, I practiced combining REST framework , API for authentication and real time update." />
             <Project demo='https://github.com/EthicalHackingLK/WIFI-Hack' githublink='https://github.com/EthicalHackingLK/WIFI-Hack' img={wifihack} title="WIFI Pass" sub="Python" description="This is an old project from my early coding days. It includes a Windows tool that could retrieve saved WiFi passwords (without admin rights).Please keep in mind that the code and structure may not reflect my current skills or best practices, but I’m leaving it here for nostalgia and as a record of my learning journey.(For educational purposes only. Use responsibly.)" />
