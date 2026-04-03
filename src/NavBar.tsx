@@ -25,7 +25,7 @@ function NavBar() {
   useEffect(() => {
     if (window.innerWidth < 700) {
       const scrollLock = () => isOpen
-      
+
       if (isOpen) {
         document.documentElement.style.overflow = 'hidden'
         document.body.style.overflow = 'hidden'

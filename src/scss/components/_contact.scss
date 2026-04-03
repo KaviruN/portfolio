@@ -11,12 +11,18 @@
     hsla(212, 100%, 50%, 0.08)
   );
   backdrop-filter: blur(14px);
-  box-shadow: 0 24px 48px hsla(265, 63%, 7%, 0.45), 0 0 60px hsla(271, 48%, 45%, 0.12);
-  transition: transform 0.36s ease, box-shadow 0.36s ease;
+  box-shadow:
+    0 24px 48px hsla(265, 63%, 7%, 0.45),
+    0 0 60px hsla(271, 48%, 45%, 0.12);
+  transition:
+    transform 0.36s ease,
+    box-shadow 0.36s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 28px 56px hsla(265, 63%, 7%, 0.52), 0 0 80px hsla(271, 48%, 45%, 0.16);
+    box-shadow:
+      0 28px 56px hsla(265, 63%, 7%, 0.52),
+      0 0 80px hsla(271, 48%, 45%, 0.16);
   }
 
   & > * {
@@ -72,7 +78,11 @@
     font-size: 0.96rem;
     font-weight: 500;
     color: hsl(0, 0%, 100%);
-    background: linear-gradient(135deg, hsla(271, 48%, 45%, 0.22), hsla(212, 100%, 50%, 0.12));
+    background: linear-gradient(
+      135deg,
+      hsla(271, 48%, 45%, 0.22),
+      hsla(212, 100%, 50%, 0.12)
+    );
     border: 1px solid hsla(271, 48%, 45%, 0.35);
     text-decoration: none;
     letter-spacing: 0.02em;
@@ -81,7 +91,11 @@
 
     &:hover {
       color: hsl(212, 100%, 50%);
-      background: linear-gradient(135deg, hsla(271, 48%, 45%, 0.32), hsla(212, 100%, 50%, 0.2));
+      background: linear-gradient(
+        135deg,
+        hsla(271, 48%, 45%, 0.32),
+        hsla(212, 100%, 50%, 0.2)
+      );
       border-color: hsla(271, 48%, 45%, 0.52);
       transform: translateY(-2px);
       box-shadow: 0 8px 20px hsla(271, 48%, 45%, 0.22);

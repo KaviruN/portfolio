@@ -89,38 +89,51 @@ body::after {
   pointer-events: none;
   z-index: -1;
   overflow: hidden;
+  background: linear-gradient(135deg, hsla(265, 63%, 12%, 0.4), hsla(271, 48%, 8%, 0.3));
 
   &__orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(6px);
-    opacity: 0.55;
+    filter: blur(80px);
+    opacity: 0.65;
     animation: driftOrb 18s ease-in-out infinite;
   }
 
   &__orb--one {
-    width: 22rem;
-    height: 22rem;
-    top: 8%;
-    left: -6rem;
-    background: radial-gradient(circle, hsla(271, 48%, 45%, 0.22) 0%, transparent 70%);
+    width: 28rem;
+    height: 28rem;
+    top: 5%;
+    left: -10rem;
+    background: radial-gradient(
+      circle,
+      hsla(271, 48%, 45%, 0.4) 0%,
+      transparent 60%
+    );
   }
 
   &__orb--two {
-    width: 18rem;
-    height: 18rem;
-    right: -5rem;
-    top: 35%;
-    background: radial-gradient(circle, hsla(212, 100%, 50%, 0.15) 0%, transparent 70%);
+    width: 24rem;
+    height: 24rem;
+    right: -8rem;
+    top: 30%;
+    background: radial-gradient(
+      circle,
+      hsla(212, 100%, 50%, 0.35) 0%,
+      transparent 65%
+    );
     animation-duration: 22s;
   }
 
   &__orb--three {
-    width: 20rem;
-    height: 20rem;
-    left: 35%;
-    bottom: -7rem;
-    background: radial-gradient(circle, hsla(271, 48%, 45%, 0.14) 0%, transparent 70%);
+    width: 26rem;
+    height: 26rem;
+    left: 30%;
+    bottom: -10rem;
+    background: radial-gradient(
+      circle,
+      hsla(271, 48%, 45%, 0.38) 0%,
+      transparent 60%
+    );
     animation-duration: 26s;
   }
 }
@@ -131,7 +144,12 @@ body::after {
   z-index: 4000;
   display: grid;
   place-items: center;
-  background: radial-gradient(circle at 40% 30%, hsla(271, 48%, 45%, 0.18), transparent 50%),
+  background:
+    radial-gradient(
+      circle at 40% 30%,
+      hsla(271, 48%, 45%, 0.18),
+      transparent 50%
+    ),
     linear-gradient(145deg, hsl(265, 63%, 7%), hsl(255, 68%, 12%));
   animation: fadeOutScreen 800ms 900ms ease forwards;
 
@@ -150,9 +168,15 @@ body::after {
     place-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
-    background: linear-gradient(135deg, hsla(271, 48%, 45%, 0.85), hsla(212, 100%, 50%, 0.65));
+    background: linear-gradient(
+      135deg,
+      hsla(271, 48%, 45%, 0.85),
+      hsla(212, 100%, 50%, 0.65)
+    );
     border: 1px solid hsla(0, 0%, 100%, 0.35);
-    box-shadow: 0 24px 48px hsla(271, 48%, 45%, 0.35), 0 0 80px hsla(271, 48%, 45%, 0.15);
+    box-shadow:
+      0 24px 48px hsla(271, 48%, 45%, 0.35),
+      0 0 80px hsla(271, 48%, 45%, 0.15);
     animation: scaleIn 600ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 

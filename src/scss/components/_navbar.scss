@@ -38,7 +38,11 @@
       text-align: center;
       inset: 0;
       padding: 0;
-      background: linear-gradient(160deg, hsla(265, 63%, 7%, 0.92), hsla(255, 68%, 12%, 0.9));
+      background: linear-gradient(
+        160deg,
+        hsla(265, 63%, 7%, 0.92),
+        hsla(255, 68%, 12%, 0.9)
+      );
       backdrop-filter: blur(f.em(14));
       width: 100%;
       max-height: 100dvh;

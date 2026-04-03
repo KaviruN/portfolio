@@ -3,7 +3,7 @@ function Hero() {
         <section className="hero">
             <div className="hero__badge">Available for internships and freelance work</div>
             <p className="hero__intro">Hello, I am <span>Kaviru Nethsara</span></p>
-            <h1>Building modern web products with a <span className="hero__highlight">security-first</span> mindset.</h1>
+            <h1>Im a Cybersecurity Undergraduate</h1>
             <h2>Full Stack Developer and Cybersecurity Enthusiast</h2>
             <p className="hero__description">
                 I create fast, scalable web experiences using React and Django while keeping security and maintainability at the center of every project.
