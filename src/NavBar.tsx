@@ -1,53 +1,69 @@
+import { useEffect, useState } from 'react'
+
 function NavBar() {
+  const [isOpen, setIsOpen] = useState(false)
 
   const closeMenu = () => {
-    const menu = document.querySelector('.navbar__list') as HTMLElement;
-    const icon = document.querySelector('.navbar__icon') as HTMLElement;
-
-    if (window.innerWidth <= 700) {
-      menu.style.display = 'none';
-      icon.classList.remove('ri-close-line');
-      icon.classList.toggle('ri-menu-line');
-    }
+    setIsOpen(false)
   }
 
   const openMenu = () => {
-    const menu = document.querySelector('.navbar__list') as HTMLElement;
-    const icon = document.querySelector('.navbar__icon') as HTMLElement;
-
-    if (menu.style.display === 'none' || menu.style.display === '') {
-      menu.style.display = 'flex';
-      icon.classList.remove('ri-menu-line');
-      icon.classList.toggle('ri-close-line');
-    }
-    else if (menu.style.display === 'flex') {
-      menu.style.display = 'none';
-      icon.classList.remove('ri-close-line');
-      icon.classList.toggle('ri-menu-line');
-    }
-
+    setIsOpen((prev) => !prev)
   }
 
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 700) {
+        setIsOpen(false)
+      }
+    }
+
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
+  useEffect(() => {
+    if (window.innerWidth < 700) {
+      document.body.style.overflow = isOpen ? 'hidden' : ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isOpen ? 'navbar--open' : ''}`}>
       <div className="navbar__container">
-        <ul className="navbar__list">
+        <ul className="navbar__list" id="primary-navigation">
           <li className="navbar__item">
             <a href="#" className="navbar__link" onClick={closeMenu}>Home</a>
           </li>
-          <li className="navba__item">
+          <li className="navbar__item">
             <a href="#about" className="navbar__link" onClick={closeMenu}>About Me</a>
           </li>
-          <li className="navba__item">
+          <li className="navbar__item">
+            <a href="#projects" className="navbar__link" onClick={closeMenu}>Projects</a>
+          </li>
+          <li className="navbar__item">
             <a href="#contact" className="navbar__link" onClick={closeMenu}>Contact</a>
           </li>
 
         </ul>
       </div>
 
-      <i className="ri-menu-line navbar__icon" onClick={openMenu}></i>
+      <button
+        className="navbar__icon"
+        onClick={openMenu}
+        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isOpen}
+        aria-controls="primary-navigation"
+        type="button"
+      >
+        <i className={isOpen ? 'ri-close-line' : 'ri-menu-line'}></i>
+      </button>
     </nav>
-  );
+  )
 
 }
 export default NavBar;

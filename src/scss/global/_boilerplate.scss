@@ -1,5 +1,4 @@
-@use '../util/' as u;
-
+@use "../util/" as u;
 
 *,
 *::before,
@@ -8,7 +7,8 @@
   margin: 0;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   position: relative; /* Needed for absolute child positioning */
@@ -23,9 +23,113 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 100dvh;
+  padding-bottom: max(1.2rem, env(safe-area-inset-bottom));
+}
+
+.site-main {
+  display: grid;
+  gap: 1.6em;
+  padding-bottom: 3em;
+}
+
+@media (max-width: 700px) {
+  .site-main {
+    gap: 1.1em;
+    padding-bottom: 2em;
+  }
+
+  section {
+    width: min(94%, 1160px);
+  }
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 42vmax;
+  height: 42vmax;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+body::before {
+  top: -18vmax;
+  left: -14vmax;
+  background: radial-gradient(
+    circle,
+    hsla(271, 48%, 45%, 0.16) 0%,
+    transparent 70%
+  );
+}
+
+body::after {
+  right: -16vmax;
+  bottom: -20vmax;
+  background: radial-gradient(
+    circle,
+    hsla(212, 100%, 50%, 0.1) 0%,
+    transparent 75%
+  );
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+section {
+  width: min(1160px, 92%);
+  margin-inline: auto;
+}
+
+.section-head {
+  margin-bottom: 1.2em;
+
+  &__kicker {
+    color: hsl(271, 48%, 58%);
+    font-size: 0.86rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+    font-family: "Roboto Mono", monospace;
+  }
+
+  &__title {
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    line-height: 1.15;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px) scale(0.98);
+  transition:
+    opacity 560ms ease,
+    transform 620ms cubic-bezier(0.21, 1, 0.21, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

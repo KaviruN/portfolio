@@ -3,7 +3,7 @@
 type ProjectProps = {
     title: string;
     sub: string;
-    description: any;
+    description: React.ReactNode;
     img: string;
     demo: string;
     githublink?: string;
@@ -11,25 +11,32 @@ type ProjectProps = {
 
 function Project({ title, description, img, demo, githublink, sub }: ProjectProps) {
     return (
-        <div className="projects__project">
-            <div className="projects__header">
-                <h4>{sub}</h4>
-                <h2 className="projects__title">{title}</h2>
-                <div className="projects__description">
-                    <p className="projects__text">{description}</p>
-                </div>
-                <div className="projects__links">
-                    <a href={githublink} target="_blank" title="GITHUB Link"><i className="ri-github-line"></i></a>
-                    <a href={demo} target="_blank" title="Demo"><i className="ri-window-line"></i></a>
-                </div>
-
-            </div>
+        <article className="projects__project">
             <div className="projects__view">
                 <div className="projects__img">
-                    <img src={img} alt="nexcent" />
+                    <img src={img} alt={title} />
                 </div>
             </div>
-        </div>
+            <div className="projects__content">
+                <div className="projects__header">
+                    <h4>{sub}</h4>
+                    <h3 className="projects__title">{title}</h3>
+                </div>
+                <p className="projects__description">{description}</p>
+                <div className="projects__links">
+                    {githublink && (
+                        <a href={githublink} target="_blank" rel="noreferrer" title="GitHub Repository">
+                            <i className="ri-github-line"></i>
+                            <span>Code</span>
+                        </a>
+                    )}
+                    <a href={demo} target="_blank" rel="noreferrer" title="Live Demo">
+                        <i className="ri-window-line"></i>
+                        <span>Live</span>
+                    </a>
+                </div>
+            </div>
+        </article>
 
     );
 }

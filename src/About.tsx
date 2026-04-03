@@ -2,17 +2,32 @@
 
 const About = () => {
     return (
-        <section className="about" id="about">
-            {/* <Spotify /> */}
+        <section className="about reveal" id="about">
+            <div className="section-head">
+                <p className="section-head__kicker">About</p>
+                <h2 className="section-head__title">Who I Am</h2>
+            </div>
             <div className="about__container">
-                <h2>About Me</h2>
-                <p>
-                    I’m a cybersecurity enthusiast and developer who enjoys building, breaking, and understanding systems from the inside out. My journey started early with hands-on experimentation—from working with Arduino projects to diving into security tools and Capture The Flag (CTF) challenges.
-
-I learn best by doing. Instead of just studying theory, I actively build projects, explore vulnerabilities, and create tools to understand how real-world systems behave. I’ve worked on projects ranging from security-focused tools to AI-based applications, and I’m always looking for ways to improve and push my skills further.
-
-I’m particularly interested in ethical hacking, system security, and network-based attacks and defenses. I enjoy the challenge of solving complex problems, even when I don’t immediately know the answer—figuring things out is part of what drives me.
-                </p>
+                <div className="about__story">
+                    <p>
+                        I am a cybersecurity enthusiast and developer who enjoys building, breaking, and understanding systems from the inside out. My journey started with hands-on experimentation, from Arduino projects to CTF challenges.
+                    </p>
+                    <p>
+                        I learn best by building. Instead of only studying theory, I create tools, ship projects, and test real-world systems to understand how they behave and fail.
+                    </p>
+                    <p>
+                        My core interest is ethical hacking, application security, and secure full-stack product development. I am always improving through practical work and constant iteration.
+                    </p>
+                </div>
+                <div className="about__focus">
+                    <h3>Current Focus</h3>
+                    <ul>
+                        <li>Secure web application development</li>
+                        <li>CTF challenges and penetration testing labs</li>
+                        <li>Backend APIs with Django and DRF</li>
+                        <li>Modern frontend interfaces with React</li>
+                    </ul>
+                </div>
             </div>
         </section>
     );
