@@ -79,8 +79,7 @@
     font-size: 1.8em;
     position: fixed;
     top: 0.7em;
-    left: 0.8em;
-    right: auto;
+    right: 0.8em;
     transform: none;
     cursor: pointer;
     z-index: 2100;
@@ -132,7 +131,7 @@
     .navbar__icon {
       @include m.breakpoint-down("medium") {
         top: 0.7em;
-        left: 0.9em;
+        right: 0.9em;
         transform: none;
       }
     }
