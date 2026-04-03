@@ -89,7 +89,11 @@ body::after {
   pointer-events: none;
   z-index: -1;
   overflow: hidden;
-  background: linear-gradient(135deg, hsla(265, 63%, 12%, 0.4), hsla(271, 48%, 8%, 0.3));
+  background: linear-gradient(
+    135deg,
+    hsla(265, 63%, 12%, 0.4),
+    hsla(271, 48%, 8%, 0.3)
+  );
 
   &__orb {
     position: absolute;
