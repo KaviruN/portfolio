@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import 'remixicon/fonts/remixicon.css'
 import 'devicon/devicon.min.css'
 import './scss/style.scss'
@@ -12,7 +12,21 @@ import Contact from './Contact';
 
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
+    const loadingTimeout = window.setTimeout(() => {
+      setIsLoading(false)
+    }, 900)
+
+    return () => window.clearTimeout(loadingTimeout)
+  }, [])
+
+  useEffect(() => {
+    if (isLoading) {
+      return
+    }
+
     const elements = Array.from(document.querySelectorAll('.reveal'))
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,10 +50,41 @@ function App() {
     })
 
     return () => observer.disconnect()
-  }, [])
+  }, [isLoading])
+
+  if (isLoading) {
+    return (
+      <div className="loading-screen" role="status" aria-live="polite" aria-label="Loading portfolio">
+        <div className="loading-screen__content">
+          <div className="loading-screen__brand">
+            <span className="loading-screen__brand-letter">K</span>
+            <span className="loading-screen__brand-letter">N</span>
+          </div>
+          <h1 className="loading-screen__text">
+            <span className="loading-screen__char">K</span>
+            <span className="loading-screen__char">a</span>
+            <span className="loading-screen__char">v</span>
+            <span className="loading-screen__char">i</span>
+            <span className="loading-screen__char">r</span>
+            <span className="loading-screen__char">u</span>
+          </h1>
+          <div className="loading-screen__dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="container">
+      <div className="ambient-bg" aria-hidden="true">
+        <span className="ambient-bg__orb ambient-bg__orb--one"></span>
+        <span className="ambient-bg__orb ambient-bg__orb--two"></span>
+        <span className="ambient-bg__orb ambient-bg__orb--three"></span>
+      </div>
       <header className='header reveal is-visible'>
         <NavBar />
         <Hero />

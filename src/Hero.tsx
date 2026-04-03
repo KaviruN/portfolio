@@ -25,6 +25,7 @@ function Hero() {
             <div className="hero__buttons">
                 <a href="#projects" className="btn">View Projects</a>
                 <a href="#about" className="btn btn--secondary">About Me</a>
+                <a href="https://blog.kaviru.me/" target="_blank" rel="noreferrer" className="btn btn--secondary">Read Blog</a>
                 <a href="#contact" className="btn btn--secondary">Contact</a>
             </div>
         </section>

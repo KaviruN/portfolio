@@ -20,12 +20,13 @@ const About = () => {
                     </p>
                 </div>
                 <div className="about__focus">
-                    <h3>Current Focus</h3>
+                    <h3>Security Expertise</h3>
                     <ul>
-                        <li>Secure web application development</li>
-                        <li>CTF challenges and penetration testing labs</li>
-                        <li>Backend APIs with Django and DRF</li>
-                        <li>Modern frontend interfaces with React</li>
+                        <li>CTF competitions &amp; capture-the-flag strategy</li>
+                        <li>API security &amp; authentication systems</li>
+                        <li>Penetration testing &amp; threat modeling</li>
+                        <li>Secure full-stack development (Django + React)</li>
+                        <li>Security tooling &amp; automation</li>
                     </ul>
                 </div>
             </div>

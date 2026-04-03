@@ -24,11 +24,26 @@ function NavBar() {
 
   useEffect(() => {
     if (window.innerWidth < 700) {
-      document.body.style.overflow = isOpen ? 'hidden' : ''
+      const scrollLock = () => isOpen
+      
+      if (isOpen) {
+        document.documentElement.style.overflow = 'hidden'
+        document.body.style.overflow = 'hidden'
+        document.body.style.position = 'fixed'
+        document.body.style.width = '100%'
+      } else {
+        document.documentElement.style.overflow = ''
+        document.body.style.overflow = ''
+        document.body.style.position = ''
+        document.body.style.width = ''
+      }
     }
 
     return () => {
+      document.documentElement.style.overflow = ''
       document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
     }
   }, [isOpen])
 
