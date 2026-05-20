@@ -4,13 +4,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="./public/icon.png" />
+  <link rel="icon" type="image/png" href="public/icon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Kaviru</title>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <div class="container">
+    <div class="ambient-bg" aria-hidden="true">
+      <span class="ambient-bg__orb ambient-bg__orb--one"></span>
+      <span class="ambient-bg__orb ambient-bg__orb--two"></span>
+      <span class="ambient-bg__orb ambient-bg__orb--three"></span>
+    </div>
+
+    <header class="header reveal is-visible">
+      <nav class="navbar">
+        <div class="navbar__container">
+          <ul class="navbar__list" id="primary-navigation">
+            <li class="navbar__item"><a href="#" class="navbar__link">Home</a></li>
+            <li class="navbar__item"><a href="#about" class="navbar__link">About Me</a></li>
+            <li class="navbar__item"><a href="#projects" class="navbar__link">Projects</a></li>
+            <li class="navbar__item"><a href="#contact" class="navbar__link">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero__badge">Available for internships and freelance work</div>
+        <p class="hero__intro">Hello, I am <span>Kaviru Nethsara</span></p>
+        <h1>Im a Cybersecurity Undergraduate</h1>
+        <h2>Full Stack Developer and Cybersecurity Enthusiast</h2>
+        <p class="hero__description">
+          I create fast, scalable web experiences using React and Django while keeping security and maintainability at
+          the center of every project.
+        </p>
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <strong>12+</strong>
+            <span>Projects built</span>
+          </div>
+          <div class="hero__meta-item">
+            <strong>CTF</strong>
+            <span>Security challenge focused</span>
+          </div>
+          <div class="hero__meta-item">
+            <strong>React + Django</strong>
+            <span>Primary stack</span>
+          </div>
+        </div>
+        <div class="hero__buttons">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="#about" class="btn btn--secondary">About Me</a>
+          <a href="https://blog.kaviru.me/" target="_blank" rel="noreferrer" class="btn btn--secondary">Read Blog</a>
+          <a href="#contact" class="btn btn--secondary">Contact</a>
+        </div>
+      </section>
+    </header>
+
+    <main class="site-main">
+      <section class="about reveal is-visible" id="about">
+        <div class="section-head">
+          <p class="section-head__kicker">About</p>
+          <h2 class="section-head__title">Who I Am</h2>
+        </div>
+        <div class="about__container">
+          <div class="about__story">
+            <p>
+              I am a cybersecurity enthusiast and developer who enjoys building, breaking, and understanding systems
+              from the inside out. My journey started with hands-on experimentation, from Arduino projects to CTF
+              challenges.
+            </p>
+            <p>
+              I learn best by building. Instead of only studying theory, I create tools, ship projects, and test
+              real-world systems to understand how they behave and fail.
+            </p>
+            <p>
+              My core interest is ethical hacking, application security, and secure full-stack product development. I
+              am always improving through practical work and constant iteration.
+            </p>
+          </div>
+          <div class="about__focus">
+            <h3>Security Expertise</h3>
+            <ul>
+              <li>CTF competitions &amp; capture-the-flag strategy</li>
+              <li>API security &amp; authentication systems</li>
+              <li>Penetration testing &amp; threat modeling</li>
+              <li>Secure full-stack development (Django + React)</li>
+              <li>Security tooling &amp; automation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills reveal is-visible">
+        <h2 class="skills__title">My Skills</h2>
+        <div class="skills__cards">
+          <div class="skills__card"><div class="skills__icon"><i class="ri-html5-fill"></i></div><div class="skills__name">HTML</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="ri-css3-fill"></i></div><div class="skills__name">css</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="ri-javascript-fill"></i></div><div class="skills__name">JavaScript</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="devicon-typescript-plain"></i></div><div class="skills__name">TypeScript</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="ri-reactjs-line"></i></div><div class="skills__name">React</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="devicon-sass-original"></i></div><div class="skills__name">Sass(Scss)</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="devicon-git-plain"></i></div><div class="skills__name">Git</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="ri-github-fill"></i></div><div class="skills__name">GitHub</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="devicon-c-plain"></i></div><div class="skills__name">C</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="devicon-python-plain"></i></div><div class="skills__name">Python</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="devicon-django-plain"></i></div><div class="skills__name">Django</div></div>
+          <div class="skills__card"><div class="skills__icon"><i class="devicon-djangorest-plain"></i></div><div class="skills__name">DjangoReset</div></div>
+        </div>
+      </section>
+
+      <section class="projects reveal is-visible" id="projects">
+        <div class="section-head">
+          <p class="section-head__kicker">Portfolio</p>
+          <h2 class="section-head__title">Featured Projects</h2>
+        </div>
+        <div class="projects__grid">
+          <article class="projects__project">
+            <div class="projects__view"><div class="projects__img"><img src="src/assets/turbostryke.png" alt="Turbo Stryke" /></div></div>
+            <div class="projects__content"><div class="projects__header"><h4>Frontend Focus</h4><h3 class="projects__title">Turbo Stryke</h3></div><p class="projects__description">A car-themed React experience with Three.js-inspired visuals, designed around speed, bold UI direction, and immersive presentation.</p><div class="projects__links"><a href="https://github.com/KaviruN/TurboStryke" target="_blank" rel="noreferrer" title="GitHub Repository"><i class="ri-github-line"></i><span>Code</span></a><a href="https://turbo.kaviru.me/" target="_blank" rel="noreferrer" title="Live Demo"><i class="ri-window-line"></i><span>Live</span></a></div></div>
+          </article>
+          <article class="projects__project">
+            <div class="projects__view"><div class="projects__img"><img src="src/assets/nexcent.png" alt="Nexcent" /></div></div>
+            <div class="projects__content"><div class="projects__header"><h4>Frontend Focus</h4><h3 class="projects__title">Nexcent</h3></div><p class="projects__description">A TypeScript React implementation of a Figma-based landing page with a clean and conversion-focused layout.</p><div class="projects__links"><a href="https://github.com/KaviruN/nexcent" target="_blank" rel="noreferrer" title="GitHub Repository"><i class="ri-github-line"></i><span>Code</span></a><a href="https://projects.kaviru.me/nexcent/" target="_blank" rel="noreferrer" title="Live Demo"><i class="ri-window-line"></i><span>Live</span></a></div></div>
+          </article>
+          <article class="projects__project">
+            <div class="projects__view"><div class="projects__img"><img src="src/assets/jake&amp;elwood.png" alt="Jake and Elwood" /></div></div>
+            <div class="projects__content"><div class="projects__header"><h4>Frontend Focus</h4><h3 class="projects__title">Jake and Elwood</h3></div><p class="projects__description">A curated set of learning experiments where I practiced layout systems, responsive design, and UI composition.</p><div class="projects__links"><a href="https://github.com/KaviruN/Jake-Elwood" target="_blank" rel="noreferrer" title="GitHub Repository"><i class="ri-github-line"></i><span>Code</span></a><a href="https://projects.kaviru.me/Jake-Elwood/" target="_blank" rel="noreferrer" title="Live Demo"><i class="ri-window-line"></i><span>Live</span></a></div></div>
+          </article>
+          <article class="projects__project">
+            <div class="projects__view"><div class="projects__img"><img src="src/assets/scroll-animations.png" alt="Scroll Animations" /></div></div>
+            <div class="projects__content"><div class="projects__header"><h4>Frontend Focus</h4><h3 class="projects__title">Scroll Animations</h3></div><p class="projects__description">A motion-first interface prototype exploring smooth transitions and scroll-triggered effects inspired by <a href="https://huly.io/" target="_blank" rel="noopener noreferrer">huly.io</a>.</p><div class="projects__links"><a href="https://github.com/KaviruN/scroll-animations" target="_blank" rel="noreferrer" title="GitHub Repository"><i class="ri-github-line"></i><span>Code</span></a><a href="https://projects.kaviru.me/scroll-animations/" target="_blank" rel="noreferrer" title="Live Demo"><i class="ri-window-line"></i><span>Live</span></a></div></div>
+          </article>
+          <article class="projects__project">
+            <div class="projects__view"><div class="projects__img"><img src="src/assets/living-the-simple-life.png" alt="Living the Simple Life" /></div></div>
+            <div class="projects__content"><div class="projects__header"><h4>Frontend Focus</h4><h3 class="projects__title">Living the Simple Life</h3></div><p class="projects__description">An early project focused on structure, content flow, and practical version control workflow as part of my growth process.</p><div class="projects__links"><a href="https://github.com/KaviruN/living-the-simple-life" target="_blank" rel="noreferrer" title="GitHub Repository"><i class="ri-github-line"></i><span>Code</span></a><a href="https://projects.kaviru.me/living-the-simple-life/" target="_blank" rel="noreferrer" title="Live Demo"><i class="ri-window-line"></i><span>Live</span></a></div></div>
+          </article>
+          <article class="projects__project">
+            <div class="projects__view"><div class="projects__img"><img src="src/assets/qrgenerator.png" alt="QR Maker" /></div></div>
+            <div class="projects__content"><div class="projects__header"><h4>Frontend Focus</h4><h3 class="projects__title">QR Maker</h3></div><p class="projects__description">A fun utility project for generating QR codes with attention to usability and approachable interface design.</p><div class="projects__links"><a href="https://github.com/KaviruN/qrcode" target="_blank" rel="noreferrer" title="GitHub Repository"><i class="ri-github-line"></i><span>Code</span></a><a href="https://projects.kaviru.me/qrcode/" target="_blank" rel="noreferrer" title="Live Demo"><i class="ri-window-line"></i><span>Live</span></a></div></div>
+          </article>
+          <article class="projects__project">
+            <div class="projects__view"><div class="projects__img"><img src="src/assets/todo.png" alt="Todo App" /></div></div>
+            <div class="projects__content"><div class="projects__header"><h4>Full Stack</h4><h3 class="projects__title">Todo App</h3></div><p class="projects__description">A full-stack todo application using Django REST APIs and React TypeScript frontend with authentication and realtime update workflows.</p><div class="projects__links"><a href="https://github.com/KaviruN/toDoApp" target="_blank" rel="noreferrer" title="GitHub Repository"><i class="ri-github-line"></i><span>Code</span></a><a href="https://todo.kaviru.me/" target="_blank" rel="noreferrer" title="Live Demo"><i class="ri-window-line"></i><span>Live</span></a></div></div>
+          </article>
+          <article class="projects__project">
+            <div class="projects__view"><div class="projects__img"><img src="src/assets/wifihack.png" alt="WiFi Pass Tool" /></div></div>
+            <div class="projects__content"><div class="projects__header"><h4>Python</h4><h3 class="projects__title">WiFi Pass Tool</h3></div><p class="projects__description">A legacy project from my early learning stage that demonstrates practical scripting and system-level experimentation.</p><div class="projects__links"><a href="https://github.com/EthicalHackingLK/WIFI-Hack" target="_blank" rel="noreferrer" title="GitHub Repository"><i class="ri-github-line"></i><span>Code</span></a><a href="https://github.com/EthicalHackingLK/WIFI-Hack" target="_blank" rel="noreferrer" title="Live Demo"><i class="ri-window-line"></i><span>Live</span></a></div></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="contact reveal is-visible" id="contact">
+      <p class="contact__kicker">Contact</p>
+      <h3>Let’s Build Something Great</h3>
+      <p>I'm currently looking to join a cross-functional team that values improving people's lives through accessible technology. I'm also passionate about CTFs and cybersecurity challenges. Got a project or idea in mind? Let’s connect.</p>
+      <a class="contact__email" href="mailto:contact@kaviru.me">contact@kaviru.me</a>
+      <div class="contact__links">
+        <a href="https://blog.kaviru.me/" target="_blank" rel="noreferrer" class="contact__link">Blog</a>
+        <a href="https://github.com/KaviruN" target="_blank" rel="noreferrer" class="contact__link">GitHub</a>
+        <a href="https://lk.linkedin.com/in/kaviru-n" target="_blank" rel="noreferrer" class="contact__link">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
